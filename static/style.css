@@ -506,7 +506,7 @@ nav {
     flex-direction: column;
 }
 
-#id_first_name, #id_last_name, #id_email, #id_username, #id_password, #id_password1, #id_password2 {
+#id_first_name, #id_last_name, #id_email, #id_username, #id_password {
     margin: 10px 0 !important;
     padding: 10px 10px !important;
 }

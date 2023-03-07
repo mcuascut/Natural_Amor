@@ -11,6 +11,8 @@ class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length=255, required=True, widget=forms.TextInput(attrs={"style":"text-transform: capitalize;", "autocapitalize": "word"}))
     last_name = forms.CharField(max_length=255, required=True, widget=forms.TextInput(attrs={"style":"text-transform: capitalize;", "autocapitalize": "word"}))
     email = forms.EmailField(required=True)
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs={"style":"margin: 10px 0;padding: 10px 10px"}))
+    password2 = forms.CharField(widget=forms.PasswordInput(attrs={"style":"margin: 10px 0;padding: 10px 10px"}))
         
     def save(self, commit=True):
         
