@@ -507,6 +507,6 @@ nav {
 }
 
 #id_first_name, #id_last_name, #id_email, #id_username, #id_password, #id_password1, #id_password2 {
-    margin: 10px 0;
-    padding: 10px 10px;
+    margin: 10px 0 !important;
+    padding: 10px 10px !important;
 }
