@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<div class="grid-container" id="products">
+    <h1 id="behind-text">Natural Amor</h1>
+    <h1 id="behind-text-2">Natural Amor</h1>
+    <div class="grid">
+        <a href="" onmouseenter="backgroundChange(this.id)" onmouseleave="backgroundRemove(this.id)" id="grid-1">
+            <div class="grid-item" id="grid-item-1">
+            </div>
+            <h3>Soaps</h3>
+        </a>
+        <a href="" onmouseenter="backgroundChange(this.id)" onmouseleave="backgroundRemove(this.id)" id="grid-2">
+            <div class="grid-item" id="grid-item-2">
+            </div>
+            <h3>Candles</h3>
+        </a>
+        <a href="" onmouseenter="backgroundChange(this.id)" onmouseleave="backgroundRemove(this.id)" id="grid-3">
+            <div class="grid-item" id="grid-item-3">
+            </div>
+            <h3>Essential Oils</h3>
+        </a>
+    </div>
+</div>
+
+<!-- New Products Section -->
+
+<div class="new-products" id="new-products">
+    <div class="header">
+        <h1>New Products</h1> 
+    </div>
+    <div class="new-products-images">
+        <div class="prod" onmouseenter="overlay(this.id)" onmouseleave="normal(this.id)" id="np1">
+            <a class="new-product-link" href="#"><button id="npb1">Add to Cart</button></a>
+        </div>
+        <div class="prod" onmouseenter="overlay(this.id)" onmouseleave="normal(this.id)" id="np2">
+            <a class="new-product-link" href="#"><button id="npb2">Add to Cart</button></a>
+        </div>
+        <div class="prod" onmouseenter="overlay(this.id)" onmouseleave="normal(this.id)" id="np3">
+            <a class="new-product-link" href="#"><button id="npb3">Add to Cart</button></a>
+        </div>
+        <div class="prod" onmouseenter="overlay(this.id)" onmouseleave="normal(this.id)" id="np4">
+            <a class="new-product-link" href="#"><button id="npb4">Add to Cart</button></a>
+        </div>
+        <div class="prod" onmouseenter="overlay(this.id)" onmouseleave="normal(this.id)" id="np5">
+            <a class="new-product-link" href="#"><button id="npb5">Add to Cart</button></a>
+        </div>
+        <div class="prod" onmouseenter="overlay(this.id)" onmouseleave="normal(this.id)" id="np6">
+            <a class="new-product-link" href="#"><button id="npb6">Add to Cart</button></a>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------- -->
+
+<!-- Current Promotions -->
+
+<div class="promos-container" id="promos-container">
+    <div class="header">
+        <h1>Current Promotions</h1>
+    </div>
+    <div class="promos">
+        <img class="promos-img" src="{% static 'sale.png' %}" alt="">
+    </div>
+</div>
+
+<!-- ---------------- -->
+
+<!-- About Us Section -->
+
+<div class="about-container">
+    <div class="header" id="about-header">
+        <h1>About Us</h1>
+    </div>
+    <div class="about-quote-container">
+        <p class="about-quote">"Our mission is to provide <b>high-quality</b> handmade soaps, candles, and essential oils 
+            that are <b>responsibly sourced</b> and crafted with respect for the environment. We are committed to using 
+            <b>sustainable and eco-friendly</b> practices to create products with natural ingredients that are safe for people and the planet. 
+            We strive to promote healthy and mindful living while also protecting our environment and promoting a green lifestyle."
+        </p>
+    </div>
+    <div class="about">
+        <div class="card" id="card-1">
+            <img src="{% static 'quality.png' %}" alt="">
+            <h3>Quality Ingredients</h3>
+        </div>
+        <div class="card" id="card-2">
+            <img src="{% static 'process.png' %}" alt="">
+            <h3>Tested Process</h3>
+        </div>
+        <div class="card" id="card-3">
+            <img src="{% static 'allergen-free.png' %}" alt="">
+            <h3>Allergen-Free Products</h3>
+        </div>
+        <div class="card" id="card-4">
+            <img src="{% static 'approved.png' %}" alt="">
+            <h3>FDA Certified</h3>
+        </div>
+    </div>
+</div>
+
+<!-- --------------- -->
+
+<!-- Contact Section -->
+
+<div class="contact-container">
+    <div class="contact">
+        <div class="header" id="contact-header">
+            <h1>Contact</h1>
+        </div>
+        <div>
+            <p>Customer Service:<a href="tel:###-####" style="text-decoration: none; color: black;"> (000) ###-####</a></p>
+            <p>Email: <a href="mailto:NaturalAmor@email.com" style="text-decoration: none; color: black;">NaturalAmor@email.com</a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

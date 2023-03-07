@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Natural Amor</title>
+    <link href="https://fonts.cdnfonts.com/css/modernspace" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body id="body">
+    <nav>        
+        <ul class="nav-list">
+            <div id="logo-container">
+                <a id="nav-logo-link" href="/"><img id="logo" src="{% static 'logo.png' %}" alt=""></a>
+            </div>
+            <div id="nav-items-container">
+                <li class="nav-item"><a class="nav-link" href="/#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#about-header">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#contact-header">Contact</a></li>
+                <li class="nav-item"><a href="#"><button class="nav-button" id="nav-button-LogIn">Log In</button></a></li>
+                <li class="nav-item"><a href="#"><button class="nav-button" id="nav-button-SignUp">Sign Up</button></a></li>
+                <li class="nav-item"><a href="#"><img src="{% static 'add-to-basket.png' %}" alt=""></a></li>
+            </div>
+        </ul>
+    </nav>
+    {% block content %}
+    
+    {% endblock %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
+    <script src="{% static 'javascript/myjs.js' %}"></script>
+
+    <footer id="footer">
+        <div>
+            <li class="footer-item"><p>&copy Michael C.</p></li>
+        </div>
+        <div class="footer-links">
+            <li class="footer-item"><a class="footer-link" href="/#products">Products</a></li>
+            <li class="footer-item"><a class="footer-link" href="/#new-products">New Products</a></li>
+            <li class="footer-item"><a class="footer-link" href="/#promos-container">Promotions</a></li>
+            <li class="footer-item"><a class="footer-link" href="/#about-header">About Us</a></li>
+        </div>
+        <div class="footer-links-2">
+            <ul>
+                <li class="footer-item"><a class="footer-link-2" target="_blank" href="https://www.etsy.com/shop/NaturalAmor?section_id=29707957">Etsy</a></li>
+                <li class="footer-item"><a class="footer-link-2" target="_blank" href="https://www.facebook.com/naturalamorusa/">Facebook</a></li>
+                <li class="footer-item"><a class="footer-link-2" target="_blank" href="https://www.instagram.com/naturalamorusa/">Instagram</a></li>
+                <li class="footer-item"><a class="footer-link-2" href="FAQ/">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

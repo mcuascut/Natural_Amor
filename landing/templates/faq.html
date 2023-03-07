@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="header">
+    <h1>FAQ's / Frequently Asked Questions</h1>
+</div>
+
+<div class="faq-list-container">
+    <ul class="faq-list">
+        <li class="faq-list-item"><a class="faq-list-link" href="">Are your products Cruelty-Free?</a></li>
+        <li class="faq-list-item"><a class="faq-list-link" href="">What payment types do you accept?</a></li>
+        <li class="faq-list-item"><a class="faq-list-link" href="">What is your return Policy?</a></li>
+        <li class="faq-list-item"><a class="faq-list-link" href="">Do you ship internationally?</a></li>
+        <li class="faq-list-item"><a class="faq-list-link" href="">How can I stay up to date regarding current promotions?</a></li>
+        <li class="faq-list-item"><a class="faq-list-link" href="">I ran out of questions...</a></li>
+        <li class="faq-list-item"><a class="faq-list-link" href="">This is a placeholder for a question...</a></li>
+        <li class="faq-list-item"><a class="faq-list-link" href="">This is a placeholder for a question...</a></li>
+        <li class="faq-list-item"><a class="faq-list-link" href="">This is a placeholder for a question...</a></li>
+        <li class="faq-list-item"><a class="faq-list-link" href="">This is a placeholder for a question...</a></li>
+    </ul>
+</div>
+
+<div class="faq-form-container">
+    <div class="header">
+        <h1>Send Us Your Question(s)</h1>
+    </div>
+        <form class="faq-form" action="#" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <p>Full Name</p>
+            <input type="text">
+            <p>Email</p>
+            <input type="text">
+            <p>Product</p>
+            <select name="" id="">
+                <option value="">None</option>
+                <option value="">Soap</option>
+                <option value="">Candle</option>
+                <option value="">Essential Oil</option>
+            </select>
+            <p>Question</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="faq-form-buttons">
+                <button class="form-button" type="reset" id="faq-form-button-clear">Clear</button>
+                <button class="form-button" type="submit" id="faq-form-button-send">Send</button>
+            </div>
+        </form>
+</div>
+{% endblock %}
